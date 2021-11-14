@@ -4,11 +4,6 @@ import streamlit as st
 import download_novelup as download
 import onsei_select as onseisel
 
-##google colab
-#st.session_state.content_dir = "/content/"
-##streamlit sharing
-st.session_state.content_dir = "/home/appuser/"
-
 def main():
 
     # タイトル
