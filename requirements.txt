@@ -1,0 +1,13 @@
+torch>=1.7.1
+transformers>=4.5.0
+tensorflow
+tensorboard
+datasets>=1.13.3
+sentencepiece>=0.1.91
+chardet
+keras==2.6
+beautifulsoup4
+pandas==1.1.3
+japanize-matplotlib
+matplotlib
+janome
