@@ -49,7 +49,7 @@ def download_novelup():
 
 
     # Make temp file path from uploaded file
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".txt",dir=st.session_state.content_dir) as f:
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".txt",dir=st.secrets.content.content_dir) as f:
 
         filepath = Path(f.name)
 

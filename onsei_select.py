@@ -76,7 +76,7 @@ def onsei_select():
         speaker = {"男1": "2b174967-1a8a-42e4-b1ae-5f6548cfa05d", "女1": "c28adf78-d67d-4588-a9a5-970a76ca6b07", "女2": "46a81787-af54-4a91-8c5b-3b597066294e"}
 
         if st.button("準備ができたらボタンを押してね"):
-            os.remove(str(st.session_state.content_dir)+"/response.wav")
-            with open(str(st.session_state.content_dir)+"/response.wav", "wb") as f:
+#            os.remove(str(st.session_state.content_dir)+"/response.wav")
+            with open(str(st.secret.content.content_dir)+"response.wav", "wb") as f:
                 f.write(t2s.text2speech(speaker[speaker_name],onsei_text))
                 st.audio(f.name)
