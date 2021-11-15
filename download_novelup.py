@@ -26,15 +26,6 @@ def download_novelup():
     name_list = []
     load_data = []
 
-    #directory作成
-
-#    if "onsei_dir" not in st.session_state:
-#        st.session_state.onsei_dir = tempfile.mkdtemp("","",st.session_state.content_dir)
-#        st.write("New session_state.onsei_dir = " + str(st.session_state.onsei_dir))
-#    else:
-#        st.write("Existing session_state.onsei_dir = " + str(st.session_state.onsei_dir))
-
-
     #元々複数でリスト渡しだったので少し修正
     name_list =[name]
 
@@ -49,7 +40,7 @@ def download_novelup():
 
 
     # Make temp file path from uploaded file
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".txt",dir=st.secrets.content.content_dir) as f:
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".txt",dir=st.secrets.content_dir) as f:
 
         filepath = Path(f.name)
 
