@@ -16,7 +16,7 @@ def onsei_select():
     st.write("区切る文字列を指定したら、選択できます")
 
     if "story" not in st.session_state:
-        st.write("テキスト読込してから来てね")
+        st.warning("テキスト読込してから来てね")
         st.stop()
 
     df = pd.read_csv(st.session_state.story)
