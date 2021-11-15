@@ -13,11 +13,11 @@ def text2speech(speaker,text):
     'coefont': speaker,
     'text': text
   })
-  signature = hmac.new(bytes(st.secrets.onsei.access_secret, 'utf-8'), (date+data).encode('utf-8'), hashlib.sha256).hexdigest()
+  signature = hmac.new(bytes(st.secrets["onsei"]["access_secret"], 'utf-8'), (date+data).encode('utf-8'), hashlib.sha256).hexdigest()
 
   response = requests.post('https://api.coefont.cloud/v1/text2speech', data=data, headers={
     'Content-Type': 'application/json',
-    'Authorization': st.secrets.onsei.accesskey,
+    'Authorization': st.secrets["onsei"]["accesskey"],
     'X-Coefont-Date': date,
     'X-Coefont-Content': signature
   })

@@ -19,7 +19,6 @@ def onsei_select():
         st.write("テキスト読込してから来てね")
         st.stop()
 
-
     df = pd.read_csv(st.session_state.story)
     col1,col2 = st.columns(2)
 
@@ -82,6 +81,6 @@ def onsei_select():
 
         if st.button("準備ができたらボタンを押してね"):
 #            os.remove(str(st.session_state.content_dir)+"/response.wav")
-            with open(str(st.secrets.content_dir)+"response.wav", "wb") as f:
+            with open(str(st.secrets["content_dir"])+"response.wav", "wb") as f:
                 f.write(t2s.text2speech(speaker[speaker_name],onsei_text))
                 st.audio(f.name)

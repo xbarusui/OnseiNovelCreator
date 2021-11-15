@@ -8,13 +8,14 @@ import novel_downloader
 
 
 def download_novelup():
-
     # ヘッダ
     st.header("ノベル読込（ノベプラから取得）")
 
     st.write("epoch数を指定した後ノベプラから学習させたい文章をURLを入れて取得します")
 
     st.write("ノベプラのURLを入れてね　例：https://novelup.plus/story/942595339")
+
+    st.write(st.secrets.)
 
     name = st.text_input(label="URL",key="textbox")
     # バリデーション処理
@@ -40,7 +41,7 @@ def download_novelup():
 
 
     # Make temp file path from uploaded file
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".txt",dir=st.secrets.content_dir) as f:
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".txt",dir=st.secrets["content_dir"]) as f:
 
         filepath = Path(f.name)
 
