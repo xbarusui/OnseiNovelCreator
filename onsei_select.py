@@ -17,7 +17,7 @@ def onsei_select():
 
     if "story" not in st.session_state:
         st.write("テキスト読込してから来てね")
-        st.stop
+        st.stop()
 
 
     df = pd.read_csv(st.session_state.story)
