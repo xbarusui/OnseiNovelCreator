@@ -15,8 +15,6 @@ def download_novelup():
 
     st.write("ノベプラのURLを入れてね　例：https://novelup.plus/story/942595339")
 
-    st.write(st.secrets.)
-
     name = st.text_input(label="URL",key="textbox")
     # バリデーション処理
     if len(name) < 1:
