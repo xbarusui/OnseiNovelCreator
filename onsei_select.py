@@ -63,7 +63,7 @@ def onsei_select():
         list_string = list_string.replace(" ","")
         # text を"。""」"で、分割
         list_story += re.split(story_sep, list_string)
-        list_story.remove("")
+#        list_story.remove("")
 
         df_story = pd.DataFrame(list_story)
         df_story.assign(voice="default") 
